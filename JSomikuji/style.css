@@ -1,0 +1,36 @@
+.omikuji {
+  text-align: center;
+  padding: 20px;
+  border: 5px solid #666;
+}
+
+.omikuji-headline {
+  margin-bottom: 20px;
+}
+
+/*TOP画面でおみくじがシャカシャカ動く処理*/
+@keyframes shake{
+  0% { transform: rotate(0deg); }
+  5% { transform: rotate(10deg); }
+  10% { transform: rotate(-10deg); }
+  15% { transform: rotate(10deg); }
+  20% { transform: rotate(-10deg); }
+  25% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.omikuji-result {
+  margin-bottom: 20px;
+  animation: shake 2.5s 2s ease-in-out 2; /*上で定義したshakeの実行*/
+
+  > img {
+    width: auto;
+    height: 300px;
+  }
+}
+
+.omikuji-button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
